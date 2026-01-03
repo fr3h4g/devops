@@ -4,7 +4,7 @@ metadata:
   name: app1-production
   namespace: argocd
 spec:
-  project: applications
+  project: default
   source:
     repoURL: https://github.com/fr3h4g/devops.git
     targetRevision: main
