@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/fr3h4g/devops.git
     targetRevision: main
-    path: apps/production/app1
+    path: apps/prod/app1
   destination:
     server: https://kubernetes.default.svc
     namespace: app1
