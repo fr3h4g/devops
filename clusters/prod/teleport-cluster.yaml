@@ -10,9 +10,9 @@ spec:
     repoURL: https://charts.releases.teleport.dev
     targetRevision: 18.6.2
     helm:
-      releaseName: teleport
+      releaseName: teleport/teleport-cluster
       valueFiles:
-        - teleport-values.yaml
+        - teleport-cluster-values.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: teleport-cluster
