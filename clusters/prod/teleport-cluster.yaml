@@ -14,7 +14,7 @@ spec:
       values: |
         clusterName: teleport.internal.binsys.net
         tls:
-          existingSecretName: teleport-internal-binsys-net-tls
+          existingSecretName: teleport-internal-binsys-net
   destination:
     server: "https://kubernetes.default.svc"
     namespace: teleport-cluster
