@@ -11,8 +11,8 @@ spec:
     targetRevision: 18.6.2
     helm:
       releaseName: teleport-cluster
-      valueFiles:
-        - teleport-cluster-values.yaml
+      values: |
+        clusterName: teleport.internal.binsys.net
   destination:
     server: "https://kubernetes.default.svc"
     namespace: teleport-cluster
