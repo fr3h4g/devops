@@ -6,11 +6,11 @@ metadata:
 spec:
   project: default
   source:
-    chart: teleport
+    chart: teleport/teleport-cluster
     repoURL: https://charts.releases.teleport.dev
     targetRevision: 18.6.2
     helm:
-      releaseName: teleport/teleport-cluster
+      releaseName: teleport-cluster
       valueFiles:
         - teleport-cluster-values.yaml
   destination:
