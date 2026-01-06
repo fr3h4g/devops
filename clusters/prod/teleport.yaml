@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: teleport
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: teleport
+    repoURL: https://charts.releases.teleport.dev
+    targetRevision: 18.6.2
+    helm:
+      releaseName: teleport
+      valueFiles:
+        - teleport-values.yaml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: teleport-cluster
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+      syncOptions:
+        - CreateNamespace=true
